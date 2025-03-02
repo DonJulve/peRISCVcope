@@ -37,9 +37,10 @@ Feedback is welcome and appreciated.
     git clone https://github.com/DonJulve/peRISCVcope.git
     cd peRISCVcope
     mkdir build-debug
+    cd build-debug
     cmake -DCMAKE_BUILD_TYPE=Debug ..
-    cd build-debug/src
-    make
+    cd src
+    make VERBOSE=1
 
 ## How to run the examples
     
