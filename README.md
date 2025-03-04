@@ -54,10 +54,10 @@ Feedback is welcome and appreciated.
 
 1. Go to the binary location
    ```sh
-        cd build-debug/src
+   cd build-debug/src
     ```
 3. Use one of the following commands:
     ```sh
-        ./periscvcope ../../examples/add_array
-        ./periscvcope ../../examples/factorial
+    ./periscvcope ../../examples/add_array
+    ./periscvcope ../../examples/factorial
     ```
