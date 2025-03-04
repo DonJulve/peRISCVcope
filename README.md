@@ -34,14 +34,16 @@ Feedback is welcome and appreciated.
 
 ## How to compile
 
+    1. Clone the repository
     git clone https://github.com/DonJulve/peRISCVcope.git
     cd peRISCVcope
-    mkdir build-debug
-    cd build-debug
-    cmake -DCMAKE_BUILD_TYPE=Debug ..
-    cd src
-    make VERBOSE=1
 
+    2. Give execution permissions to the build.sh script
+    chmod +x build.sh
+
+    3. Use build.sh script to compile the project
+    ./build.sh
+    
 ## How to run the examples
     
     ./periscvcope ../../examples/add_array
