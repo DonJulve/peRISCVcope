@@ -119,9 +119,6 @@ uint32_t instrs::alui(mem::memory &, processor &proc, uint32_t bitstream) {
       // Desplazamiento lógico a la izquierda (SLLI) determinado por los 5 bits menos significativos de imm
       proc.write_reg(ii.rd(), val << (ii.imm() & 0x1F)); 
       break;
-    case 0b0100000: // SUBI
-      proc.write_reg(ii.rd(), val - ii.imm());  
-      break;
   }
   return proc.next_pc();
 }
@@ -140,9 +137,6 @@ uint32_t instrs::alur(mem::memory &, processor &proc, uint32_t bitstream) {
       } else if (ri.funct7() == 0b0000001) { // MUL
         proc.write_reg(ri.rd(), val1 * val2);
       }
-      break;
-    case 0b010: // SUB
-      proc.write_reg(ri.rd(), val1 - val2);
       break;
   }
   return proc.next_pc();
