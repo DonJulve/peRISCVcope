@@ -34,15 +34,21 @@ Feedback is welcome and appreciated.
 
 ## How to compile
 
-    1. Clone the repository
+1. Clone the repository
+   ```sh
     git clone https://github.com/DonJulve/peRISCVcope.git
     cd peRISCVcope
+   ```
 
-    2. Give execution permissions to the build.sh script
+2. Give execution permissions to the build.sh script
+   ```sh
     chmod +x build.sh
+   ```
 
-    3. Use build.sh script to compile the project
+3. Use build.sh script to compile the project
+   ```sh
     ./build.sh
+   ```
     
 ## How to run the examples
     
