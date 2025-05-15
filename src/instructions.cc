@@ -136,6 +136,8 @@ uint32_t instrs::alur(mem::memory &, processor &proc, uint32_t bitstream) {
         proc.write_reg(ri.rd(), val1 + val2);
       } else if (ri.funct7() == 0b0000001) { // MUL
         proc.write_reg(ri.rd(), val1 * val2);
+      } else if (ri.funct7() == 0b0100000) { // SUB
+        proc.write_reg(ri.rd(), val1 - val2);
       }
       break;
   }
@@ -156,7 +158,7 @@ uint32_t instrs::jal(mem::memory &, processor &proc, uint32_t bitstream) {
 
   // Save the return address
   uint32_t current_pc = proc.read_pc(); //PC actual
-  proc.write_reg(1, current_pc + 4);
+  proc.write_reg(ji.rd(), current_pc + 4);
 
   // Calculate the jump address
   address_t addr = current_pc + ji.imm(); //PC actual + offset
